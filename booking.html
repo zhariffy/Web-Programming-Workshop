@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibreSchool - Room & Facility Booking</title>
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">LibreSchool - PSS SMK Bukit Baru</div>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="borrowing.html">Borrowing</a>
+            <a href="booking.html" class="active">Booking</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="header-row">
+            <div>
+                <h1>Room & Facility Booking</h1>
+                <p class="muted">Reserve discussion rooms, AV rooms, or computer terminals without slot conflicts.</p>
+            </div>
+
+            <div class="role-box">
+                <label for="roleSelect" class="inline-label">Role View:</label>
+                <select id="roleSelect" class="role-select">
+                    <option value="STUDENT">Student</option>
+                    <option value="TEACHER">Teacher</option>
+                    <option value="GPM">Admin / GPM</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="alertBox" class="alert" role="alert"></div>
+
+        <div class="grid">
+            <div>
+                <div class="card">
+                    <h2 id="formHeading">Book a Facility</h2>
+                    <form id="bookingForm">
+                        <input type="hidden" id="editId" value="">
+
+                        <div class="form-group">
+                            <label for="facilitySelect">Facility</label>
+                            <select id="facilitySelect" required></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dateInput">Date</label>
+                            <input type="date" id="dateInput" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="slotSelect">Time Slot</label>
+                            <select id="slotSelect" required></select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="purposeInput">Purpose</label>
+                            <input type="text" id="purposeInput" placeholder="e.g., NILAM group discussion" required>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn-full">Reserve Slot</button>
+                        <button type="button" id="cancelEditBtn" class="btn-full btn-secondary hidden">Cancel Reschedule</button>
+                    </form>
+                </div>
+
+                <div id="gpmPanel" class="card hidden">
+                    <h2>GPM Facility Setup</h2>
+                    <p class="muted mb-10">Enable or set facilities to maintenance.</p>
+                    <div id="facilityStatusList"></div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card">
+                    <h2>Slot Availability</h2>
+                    <p class="muted" id="scheduleSubtitle"></p>
+                    <div id="slotGrid" class="slot-grid"></div>
+                </div>
+
+                <div class="card">
+                    <h2 id="tableHeading">My Bookings</h2>
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Facility & Purpose</th>
+                                    <th>Date & Slot</th>
+                                    <th>User</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookingsBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/booking.js"></script>
+</body>
+</html>
