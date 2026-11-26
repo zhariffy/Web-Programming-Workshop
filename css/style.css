@@ -1,0 +1,328 @@
+
+/* ==============================
+   LIBRESCHOOL HOMEPAGE
+   ============================== */
+
+.homepage,
+.homepage * {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.homepage {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* ==============================
+   NAVIGATION BAR
+   ============================== */
+
+.home-navbar {
+    background-color: #1b5e20;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.home-logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.home-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.home-nav-links a:hover,
+.home-nav-links a.active {
+    color: #a5d6a7;
+}
+
+.home-nav-links .home-register-btn {
+    background-color: white;
+    color: #1b5e20;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.home-nav-links .home-register-btn:hover {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.home-hero {
+    background-color: #e8f5e9;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.home-tagline {
+    color: #2e7d32;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-hero h1 {
+    color: #1b5e20;
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.home-hero h2 {
+    color: #388e3c;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.home-hero p {
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.home-hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.home-primary-btn,
+.home-secondary-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.home-primary-btn {
+    background-color: #2e7d32;
+    color: white;
+    border: 2px solid #2e7d32;
+}
+
+.home-primary-btn:hover {
+    background-color: #1b5e20;
+}
+
+.home-secondary-btn {
+    background-color: transparent;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+}
+
+.home-secondary-btn:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+
+/* ==============================
+   LIBRARY SERVICES
+   ============================== */
+
+.home-services {
+    max-width: 1400px;
+    margin: auto;
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.home-services h2 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 5px;
+}
+
+.home-section-description {
+    color: #666;
+    margin-bottom: 35px;
+}
+
+.home-service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.home-service-card {
+    background-color: white;
+    padding: 30px 20px;
+    border: 1px solid #dce7dc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #0001;
+    transition: 0.3s;
+}
+
+.home-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px #0002;
+}
+
+.home-service-icon {
+    font-size: 45px;
+}
+
+.home-service-card h3 {
+    color: #2e7d32;
+    font-size: 20px;
+}
+
+.home-service-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.home-service-card a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.home-service-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   ABOUT SECTION
+   ============================== */
+
+.home-about {
+    background-color: #e8f5e9;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.home-about h2 {
+    color: #1b5e20;
+    font-size: 32px;
+}
+
+.home-about h3 {
+    color: #2e7d32;
+}
+
+.home-about p {
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+
+/* ==============================
+   CALL TO ACTION
+   ============================== */
+
+.home-cta {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.home-cta h2 {
+    color: #1b5e20;
+}
+
+.home-cta p {
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+.home-footer {
+    background-color: #1b5e20;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.home-footer h3 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.home-footer p {
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media screen and (max-width: 1000px) {
+
+    .home-service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .home-navbar {
+        flex-direction: column;
+    }
+
+    .home-nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .home-hero {
+        padding: 50px 20px;
+    }
+
+    .home-hero h1 {
+        font-size: 32px;
+    }
+
+    .home-hero h2 {
+        font-size: 18px;
+    }
+
+    .home-service-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
