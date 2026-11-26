@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LibreSchool - Borrowing</title>
+    <link rel="stylesheet" href="css/borrowing.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">LibreSchool - PSS SMK Bukit Baru</div>
+        <nav class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="catalog.html">Catalog</a>
+            <a href="borrowing.html" class="active">Borrowing</a>
+            <a href="booking.html">Booking</a>
+            <a href="reports.html">Reports</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="header-row">
+            <div>
+                <h1>Borrowing</h1>
+                <p class="muted">View your current loans, renew books and check your borrowing history.</p>
+            </div>
+
+            <button type="button" id="slipBtn" class="btn-secondary">Download loan slip</button>
+        </div>
+
+        <!-- Overdue banner (dipaparkan oleh JavaScript bila ada buku lewat) -->
+        <div id="overdueBanner" class="overdue-banner hidden" role="alert">
+            <span class="banner-icon" aria-hidden="true">!</span>
+            <div>
+                <strong id="bannerTitle"></strong>
+                <p id="bannerText"></p>
+            </div>
+        </div>
+
+        <!-- Mesej selepas tindakan (contoh: renew berjaya) -->
+        <div id="alertBox" class="alert hidden" role="alert"></div>
+
+        <div class="card">
+            <h2>Borrowing Records</h2>
+
+            <div class="tabs" role="tablist">
+                <button type="button" class="tab active" role="tab" data-tab="current" aria-selected="true">
+                    Current loans <span id="tabCurrent"></span>
+                </button>
+                <button type="button" class="tab" role="tab" data-tab="returned" aria-selected="false">
+                    Returned <span id="tabReturned"></span>
+                </button>
+                <button type="button" class="tab" role="tab" data-tab="reservations" aria-selected="false">
+                    Reservations <span id="tabReservations"></span>
+                </button>
+            </div>
+
+            <div id="recordsWrap" class="table-wrapper">
+                <table>
+                    <thead id="recordsHead"></thead>
+                    <tbody id="recordsBody"></tbody>
+                </table>
+            </div>
+
+            <p id="recordsEmpty" class="muted hidden">No reservations yet.</p>
+
+            <p id="recordsNote" class="muted note">
+                Renewals are allowed once for 7 days if the book is not overdue or reserved by another student.
+            </p>
+        </div>
+
+        <div class="bottom-grid">
+            <div class="card">
+                <div class="card-head">
+                    <h2>Recently Returned</h2>
+                    <button type="button" id="fullHistoryBtn" class="link-btn">Full history &rarr;</button>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Book</th>
+                                <th>Returned on</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="recentBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Borrowing Guide</h2>
+                <ul class="guide-list">
+                    <li>Maximum 3 books at one time</li>
+                    <li>Standard loan period: 14 days</li>
+                    <li>Return books to the library counter</li>
+                    <li>Report lost or damaged books promptly</li>
+                </ul>
+                <a href="#" class="link-btn">Contact the librarian &rarr;</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/borrowing.js"></script>
+</body>
+</html>

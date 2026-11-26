@@ -1,0 +1,431 @@
+/* ==============================
+   LIBRESCHOOL BORROWING PAGE
+   Struktur sama dengan booking.html:
+   topbar, nav-links, container, header-row, card, table-wrapper
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f8f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.muted {
+    color: #666;
+}
+
+
+/* ==============================
+   TOP BAR
+   ============================== */
+
+.topbar {
+    background-color: #1b5e20;
+    padding: 16px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.brand {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #a5d6a7;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+
+/* ==============================
+   LAYOUT
+   ============================== */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 5% 50px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.header-row h1 {
+    color: #1b5e20;
+    font-size: 30px;
+    margin: 0 0 5px;
+}
+
+.header-row p {
+    margin: 0;
+}
+
+.card {
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #dce7dc;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #0001;
+    margin-bottom: 25px;
+}
+
+.card h2 {
+    color: #1b5e20;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+
+.card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.card-head h2 {
+    margin: 0;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 25px;
+    align-items: start;
+}
+
+.bottom-grid .card {
+    margin-bottom: 0;
+}
+
+.guide-list {
+    color: #666;
+    font-size: 14px;
+    padding-left: 20px;
+    margin: 0 0 18px;
+}
+
+.note {
+    font-size: 14px;
+    margin: 15px 0 0;
+}
+
+
+/* ==============================
+   ALERTS
+   ============================== */
+
+.overdue-banner {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background-color: #fff3e0;
+    border: 1px solid #ffe0b2;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 25px;
+    color: #8a5a14;
+}
+
+.overdue-banner p {
+    margin: 2px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.banner-icon {
+    flex: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #8a5a14;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+}
+
+.alert.success {
+    background-color: #e8f5e9;
+    border: 1px solid #a5d6a7;
+    color: #1b5e20;
+}
+
+.alert.error {
+    background-color: #fdecea;
+    border: 1px solid #f5c6c2;
+    color: #b71c1c;
+}
+
+
+/* ==============================
+   BUTTONS
+   ============================== */
+
+.btn-secondary,
+.btn-small {
+    background-color: white;
+    color: #2e7d32;
+    border: 2px solid #2e7d32;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-secondary {
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.btn-small {
+    padding: 6px 14px;
+    font-size: 14px;
+}
+
+.btn-secondary:hover,
+.btn-small:hover {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.btn-small:disabled {
+    background-color: #eceff1;
+    color: #90a4ae;
+    border-color: #eceff1;
+    cursor: not-allowed;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #2e7d32;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #2e7d32;
+    outline-offset: 2px;
+}
+
+
+/* ==============================
+   TABS
+   ============================== */
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-bottom: 1px solid #dce7dc;
+    margin-bottom: 20px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #666;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab:hover {
+    color: #1b5e20;
+}
+
+.tab.active {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    font-weight: bold;
+    border-bottom-color: #2e7d32;
+    border-radius: 6px 6px 0 0;
+}
+
+
+/* ==============================
+   TABLE
+   ============================== */
+
+.table-wrapper {
+    overflow-x: auto;
+    border: 1px solid #dce7dc;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    min-width: 640px;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th {
+    background-color: #f5f8f5;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    padding: 14px 16px;
+}
+
+td {
+    padding: 14px 16px;
+    border-top: 1px solid #dce7dc;
+    vertical-align: middle;
+}
+
+.book-title {
+    display: block;
+    font-weight: bold;
+}
+
+.book-code {
+    display: block;
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* ==============================
+   STATUS PILLS
+   ============================== */
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.pill::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: currentColor;
+}
+
+.pill.overdue {
+    background-color: #fdecea;
+    color: #b71c1c;
+}
+
+.pill.soon {
+    background-color: #fff3e0;
+    color: #8a5a14;
+}
+
+.pill.ok {
+    background-color: #eceff1;
+    color: #455a64;
+}
+
+.pill.returned {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media screen and (max-width: 900px) {
+
+    .bottom-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+}
+
+
+/* ==============================
+   PRINT (Download loan slip)
+   ============================== */
+
+@media print {
+
+    .topbar,
+    .overdue-banner,
+    .alert,
+    .bottom-grid,
+    #slipBtn,
+    .btn-small {
+        display: none !important;
+    }
+
+}
