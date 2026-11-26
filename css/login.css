@@ -1,1 +1,150 @@
 
+/* General Settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e8f5e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Login Box */
+
+.login-box {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 12px #0002;
+}
+
+h2 {
+    color: #2e7d32;
+}
+
+.login-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* Form */
+
+form {
+    margin-top: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+
+/* Username and Password */
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: 2px solid #2e7d32;
+}
+
+
+/* Show Password */
+
+.show-password {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.show-password label {
+    margin: 0;
+    font-weight: normal;
+}
+
+.show-password input {
+    accent-color: #2e7d32;
+    cursor: pointer;
+}
+
+
+/* Login Button */
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* Validation Message */
+
+#message {
+    text-align: center;
+    font-size: 14px;
+}
+
+#message.error {
+    color: #c62828;
+}
+
+#message.success {
+    color: #2e7d32;
+}
+
+
+/* Navigation Links */
+
+a {
+    color: #2e7d32;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.home-link {
+    display: block;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
